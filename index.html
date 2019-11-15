@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elsmog's Etch-a-Sketch Project</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <h1>Etch-a-Sketch</h1>
+    <div id="grid-container"></div>
+    <script>
+      const gridContainer = document.getElementById("grid-container");
+
+      for (var i = 0; i < 256; i++) {
+        const gridItem = document.createElement("div");
+        gridItem.setAttribute("id", i + 1);
+        gridItem.setAttribute("class", "grid-item");
+        gridContainer.appendChild(gridItem);
+        document.getElementById("grid-container").addEventListener("mouseover", function(e) {
+          e.target.style.backgroundColor = "black";
+        });
+      };
+
+      
+
+    </script>
+  </body>
+</html>
